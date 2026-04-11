@@ -33,17 +33,26 @@ export default function Contact() {
     }
 
     try {
-      await emailjs.send(
+      console.log('EmailJS config', {
+        SERVICE_ID,
+        TEMPLATE_ID,
+        PUBLIC_KEY,
+        payload,
+      })
+
+      const result = await emailjs.send(
         SERVICE_ID,
         TEMPLATE_ID,
         payload,
         PUBLIC_KEY
       )
 
+      console.log('EmailJS success result:', result)
+
       setStatus('Message sent successfully.')
       form.reset()
     } catch (err) {
-      console.error(err)
+      console.error('EmailJS error:', err)
       setStatus(null)
       setError('Failed to send message.')
     }
