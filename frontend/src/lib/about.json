@@ -1,0 +1,70 @@
+{
+  "title": "About Me",
+  "intro": "A short introduction to who I am, what I work on, and what I’m aiming toward.",
+  "sections": [
+    {
+      "type": "paragraph",
+      "title": "Who I Am",
+      "content": "I’m Benjamin Jarlsson Nemeth, an Electrical Engineering student at DTU with a strong interest in systems that combine hardware, software, and intelligent behavior."
+    },
+    {
+      "type": "paragraph",
+      "title": "What I Do",
+      "content": "I enjoy building projects that connect theory with practical implementation, especially where electronics, software, and system architecture meet."
+    },
+    {
+      "type": "list",
+      "title": "Core Interests",
+      "items": [
+        "Electrical engineering",
+        "AI and intelligent systems",
+        "Robotics and autonomy",
+        "Embedded systems",
+        "Physics and mathematical modeling",
+        "Scalable software systems"
+      ]
+    },
+    {
+      "type": "timeline",
+      "title": "Journey",
+      "items": [
+        {
+          "label": "Current",
+          "title": "DTU — Electrical Engineering",
+          "description": "Building a strong foundation in electronics, systems, and problem solving."
+        },
+        {
+          "label": "Projects",
+          "title": "Independent technical projects",
+          "description": "Exploring software, AI, smart systems, and full-stack engineering."
+        }
+      ]
+    },
+    {
+      "type": "skills",
+      "title": "Focus Areas",
+      "items": [
+        { "label": "Systems Design", "value": 85 },
+        { "label": "Software Development", "value": 80 },
+        { "label": "Electrical Engineering", "value": 75 },
+        { "label": "AI / Robotics", "value": 70 }
+      ]
+    },
+    {
+    "type": "timeline",
+    "title": "Achievements",
+    "items": [
+        {
+        "label": "2026",
+        "title": "DTU Electrical Engineering",
+        "description": "Currently studying and building projects alongside coursework."
+        },
+        {
+        "label": "2025",
+        "title": "Top grades in TN-102 & Mat-100",
+        "description": "Achieved highest grade (12) in both subjects."
+        }
+    ]
+    }
+  ]
+}

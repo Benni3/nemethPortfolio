@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Portfolio Site",
+    "slug": "portfolio-site",
+    "summary": "A minimal portfolio built with a React + Vite frontend and an Express API.",
+    "description": "This site — built with React, Tailwind, and Express.",
+    "tags": ["React", "TypeScript", "Tailwind", "Express"],
+    "status": "active",
+    "date": "2026-04-10",
+    "images": [
+      {
+        "src": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80",
+        "alt": "Desk setup"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=1600&q=80",
+        "alt": "Laptop"
+      }
+    ],
+    "links": [{ "label": "Source", "url": "#" }]
+  },
+  {
+    "title": "Minimal API",
+    "slug": "minimal-api",
+    "summary": "A small TypeScript API demonstrating clean patterns.",
+    "description": "A small TypeScript API demonstrating clean patterns.",
+    "tags": ["TypeScript", "Node.js", "Express"],
+    "status": "wip",
+    "date": "2026-04-10",
+    "images": [
+      {
+        "src": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1600&q=80",
+        "alt": "Code editor"
+      }
+    ],
+    "links": [{ "label": "Source", "url": "#" }]
+  }
+]
