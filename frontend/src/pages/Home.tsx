@@ -31,7 +31,7 @@ function ProjectCarousel() {
         setLoading(true)
         setError(null)
 
-        const API_BASE = 'https://nemeth-api.benjamin-nemeth05.workers.dev'
+        const API_BASE = import.meta.env.VITE_API_BASE_URL
         const res = await fetch(`${API_BASE}/api/projects`)
         if (!res.ok) throw new Error('Failed to load projects')
 

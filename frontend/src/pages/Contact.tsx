@@ -13,7 +13,7 @@ export default function Contact(){
     const form = e.currentTarget
     const fd = new FormData(form)
     const payload = { name: fd.get('name'), email: fd.get('email'), subject: fd.get('subject'), message: fd.get('message') }
-    const API_BASE = 'https://nemeth-api.benjamin-nemeth05.workers.dev'
+    const API_BASE = import.meta.env.VITE_API_BASE_URL
 
     try {
       const res = await fetch(`${API_BASE}/api/contact`, {

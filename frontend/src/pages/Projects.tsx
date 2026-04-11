@@ -16,7 +16,7 @@ export default function Projects(){
   const [selected, setSelected] = useState<string[]>([])
 
   useEffect(() => {
-    const API_BASE = 'https://nemeth-api.benjamin-nemeth05.workers.dev'
+    const API_BASE = import.meta.env.VITE_API_BASE_URL
     fetch(`${API_BASE}/api/projects`)
       .then(r => r.json())
       .then(setProjects)
