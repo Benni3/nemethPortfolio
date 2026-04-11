@@ -1,0 +1,5 @@
+{
+  "name": "nemethportfolio-api",
+  "main": "src/worker.ts",
+  "compatibility_date": "2026-04-11"
+}
