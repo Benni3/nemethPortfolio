@@ -31,7 +31,8 @@ function ProjectCarousel() {
         setLoading(true)
         setError(null)
 
-        const res = await fetch('/api/projects')
+        const API_BASE = 'https://nemeth-api.benjamin-nemeth05.workers.dev'
+        const res = await fetch(`${API_BASE}/api/projects`)
         if (!res.ok) throw new Error('Failed to load projects')
 
         const data = (await res.json()) as Project[]

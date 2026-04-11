@@ -17,7 +17,8 @@ export default function Project(){
     if (!slug) return
 
     setState({ kind: 'loading' })
-    fetch(`/api/projects/${slug}`)
+    const API_BASE = 'https://nemeth-api.benjamin-nemeth05.workers.dev'
+    fetch(`${API_BASE}/api/projects`)
       .then(async (r) => {
         if (r.status === 404) {
           setState({ kind: 'notfound' })

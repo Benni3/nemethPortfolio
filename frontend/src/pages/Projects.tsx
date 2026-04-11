@@ -16,7 +16,8 @@ export default function Projects(){
   const [selected, setSelected] = useState<string[]>([])
 
   useEffect(() => {
-    fetch('/api/projects')
+    const API_BASE = 'https://nemeth-api.benjamin-nemeth05.workers.dev'
+    fetch(`${API_BASE}/api/projects`)
       .then(r => r.json())
       .then(setProjects)
       .catch(() => setProjects([]))
