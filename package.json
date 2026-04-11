@@ -1,7 +1,10 @@
 {
   "name": "benjamin-portfolio",
   "private": true,
-  "workspaces": ["frontend", "backend"],
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
   "scripts": {
     "dev": "concurrently -k -n BACKEND,FRONTEND -c blue,green \"npm:dev -w backend\" \"npm:dev -w frontend\"",
     "build": "npm run build -w frontend && npm run build -w backend",
@@ -15,5 +18,8 @@
   },
   "engines": {
     "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1"
   }
 }
