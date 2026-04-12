@@ -56,15 +56,56 @@
     "items": [
         {
         "label": "2026",
-        "title": "DTU Electrical Engineering",
-        "description": "Currently studying and building projects alongside coursework."
+        "title": "DTU — Electrical Engineering (Ongoing)",
+        "description": "Currently pursuing a Bachelor's degree in Electrical Engineering, focusing on systems design, electronics, and software integration.",
+        "links": [
+            {
+            "label": "View University",
+            "url": "https://www.dtu.dk"
+            }
+        ]
         },
         {
         "label": "2025",
-        "title": "Top grades in TN-102 & Mat-100",
-        "description": "Achieved highest grade (12) in both subjects."
+        "title": "Top Grades — TN-102 & Mat-100",
+        "description": "Achieved the highest grade (12) in both TN-102 and Mat-100, demonstrating strong analytical and mathematical capabilities.",
+        "links": [
+            {
+            "label": "Download Certificate",
+            "url": "/certificates/tn102-mat100.pdf"
+            }
+        ]
+        },
+        {
+        "label": "2025",
+        "title": "Independent Engineering Projects",
+        "description": "Designed and built multiple full-stack and hardware-integrated projects, combining software, systems design, and real-world problem solving.",
+        "links": [
+            {
+            "label": "View Projects",
+            "url": "/projects"
+            }
+        ]
+        },
+        {
+        "label": "2024",
+        "title": "Technical Work — Ryde Technologies",
+        "description": "Worked with hardware diagnostics and repair of electric scooters, gaining hands-on experience with electronics, troubleshooting, and system reliability.",
+        "links": []
+        },
+        {
+        "label": "2023",
+        "title": "St. Olav / UiS Coursework",
+        "description": "Completed advanced technical coursework alongside high school studies, achieving top results and building early academic foundations.",
+        "links": [
+            {
+            "label": "View Transcript",
+            "url": "/certificates/uis-transcript.pdf"
+            }
+        ]
         }
     ]
     }
   ]
+  
 }

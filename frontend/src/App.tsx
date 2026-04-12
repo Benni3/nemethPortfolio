@@ -12,7 +12,7 @@ export default function App() {
        <header className="sticky top-0 z-20 border-b border-zinc-200/60 bg-white/90 backdrop-blur-xl dark:border-zinc-800/60 dark:bg-black/80">
           <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
             <NavLink to="/" className="font-semibold tracking-tight">
-              benjamin.dev
+              Nemeth
             </NavLink>
 
             <nav className="flex gap-4 text-sm">

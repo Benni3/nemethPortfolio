@@ -14,7 +14,8 @@ export default function Projects() {
     const [projects, setProjects] = useState(null);
     const [selected, setSelected] = useState([]);
     useEffect(() => {
-        fetch('/api/projects')
+        const API_BASE = import.meta.env.VITE_API_BASE_URL;
+        fetch(`${API_BASE}/api/projects`)
             .then(r => r.json())
             .then(setProjects)
             .catch(() => setProjects([]));

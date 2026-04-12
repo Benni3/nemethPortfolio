@@ -10,7 +10,8 @@ export default function Project() {
         if (!slug)
             return;
         setState({ kind: 'loading' });
-        fetch(`/api/projects/${slug}`)
+        const API_BASE = import.meta.env.VITE_API_BASE_URL;
+        fetch(`${API_BASE}/api/projects`)
             .then(async (r) => {
             if (r.status === 404) {
                 setState({ kind: 'notfound' });
