@@ -474,30 +474,33 @@ function ProjectCarousel() {
         <p className="text-sm text-red-500">{error}</p>
       ) : (
         <>
-          <div className="flex gap-4 overflow-x-auto pb-2 md:hidden">
+          {/* Mobile */}
+          <div className="flex gap-4 overflow-x-auto pb-2 md:hidden snap-x snap-mandatory">
             {featured.map((project) => (
               <Link
                 key={project.slug}
                 to={`/projects/${project.slug}`}
-                className="min-w-[220px] shrink-0"
+                className="w-[75vw] max-w-[260px] min-w-[220px] shrink-0 snap-start"
               >
                 <Card className="h-full p-4">
-                  <div className="h-32 overflow-hidden rounded-2xl bg-white/20 sm:h-36 md:h-auto md:aspect-[16/9] dark:bg-white/10">
-                    {project.images?.[0]?.src ? (
-                      <img
-                        src={project.images[0].src}
-                        alt={project.images[0].alt || project.title}
-                        className="h-full w-full object-cover"
-                      />
-                    ) : (
-                      <div className="flex h-full w-full items-center justify-center text-sm text-zinc-500">
-                        Project image
-                      </div>
-                    )}
+                  <div className="overflow-hidden rounded-2xl bg-white/20 dark:bg-white/10">
+                    <div className="h-36 w-full">
+                      {project.images?.[0]?.src ? (
+                        <img
+                          src={project.images[0].src}
+                          alt={project.images[0].alt || project.title}
+                          className="h-full w-full object-cover object-center"
+                        />
+                      ) : (
+                        <div className="flex h-full w-full items-center justify-center text-sm text-zinc-500">
+                          Project image
+                        </div>
+                      )}
+                    </div>
                   </div>
 
                   <h3 className="mt-3 text-base font-semibold">{project.title}</h3>
-                  <p className="mt-2 text-sm text-zinc-700 dark:text-zinc-300">
+                  <p className="mt-2 line-clamp-3 text-sm text-zinc-700 dark:text-zinc-300">
                     {project.summary}
                   </p>
                 </Card>
@@ -505,6 +508,7 @@ function ProjectCarousel() {
             ))}
           </div>
 
+          {/* Desktop */}
           <div className="hidden overflow-hidden md:block">
             <div
               className="flex gap-4 transition-transform duration-300 ease-out"
@@ -517,18 +521,21 @@ function ProjectCarousel() {
                   className="w-[228px] shrink-0"
                 >
                   <Card className="h-full p-4">
-                    <div className="h-32 overflow-hidden rounded-2xl bg-white/20 sm:h-36 md:h-auto md:aspect-[16/9] dark:bg-white/10">
-                      {project.images?.[0]?.src ? (
-                        <img
-                          src={project.images[0].src}
-                          alt={project.images[0].alt || project.title}
-                          className="h-full w-full object-cover"
-                        />
-                      ) : (
-                        <div className="flex h-full w-full items-center justify-center text-sm text-zinc-500">
-                          Project image
-                        </div>
-                      )}
+                    <div className="overflow-hidden rounded-2xl bg-white/20 dark:bg-white/10">
+                      <div className="aspect-[16/9] w-full">
+                        {project.images?.[0]?.src ? (
+                          <img
+                            src={project.images[0].src}
+                            alt={project.images[0].alt || project.title}
+                            className="h-full w-full object-cover object-center"
+                            loading="lazy"
+                          />
+                        ) : (
+                          <div className="flex h-full w-full items-center justify-center text-sm text-zinc-500">
+                            Project image
+                          </div>
+                        )}
+                      </div>
                     </div>
 
                     <h3 className="mt-3 text-base font-semibold">{project.title}</h3>

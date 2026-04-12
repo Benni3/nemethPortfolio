@@ -3,40 +3,82 @@ import type { Project } from '../lib/projects'
 import ProjectCard from '../components/ProjectCard'
 import TagSelect from '../components/TagSelect'
 
+function normalizeProject(project: Project): Project {
+  return {
+    ...project,
+    tags: project.tags ?? [],
+    images: project.images ?? [],
+    links: project.links ?? [],
+    downloads: project.downloads ?? [],
+    contact: project.contact ?? [],
+  }
+}
+
 function countTags(projects: Project[]) {
   const counts: Record<string, number> = {}
-  for (const p of projects) {
-    for (const t of p.tags) counts[t] = (counts[t] ?? 0) + 1
+
+  for (const project of projects) {
+    for (const tag of project.tags ?? []) {
+      counts[tag] = (counts[tag] ?? 0) + 1
+    }
   }
+
   return counts
 }
 
-export default function Projects(){
+export default function Projects() {
   const [projects, setProjects] = useState<Project[] | null>(null)
   const [selected, setSelected] = useState<string[]>([])
 
   useEffect(() => {
-    const API_BASE = import.meta.env.VITE_API_BASE_URL
-    fetch(`${API_BASE}/api/projects`)
-      .then(r => r.json())
-      .then(setProjects)
-      .catch(() => setProjects([]))
+    let cancelled = false
+
+    async function loadProjects() {
+      try {
+        const API_BASE = import.meta.env.VITE_API_BASE_URL
+        const res = await fetch(`${API_BASE}/api/projects`)
+
+        if (!res.ok) throw new Error('Failed to load projects')
+
+        const data = (await res.json()) as Project[]
+        if (!cancelled) {
+          setProjects(data.map(normalizeProject))
+        }
+      } catch {
+        if (!cancelled) {
+          setProjects([])
+        }
+      }
+    }
+
+    loadProjects()
+
+    return () => {
+      cancelled = true
+    }
   }, [])
 
   const tagCounts = useMemo(() => countTags(projects ?? []), [projects])
 
   const allTags = useMemo(() => {
-    return Object.keys(tagCounts).sort((a, b) => (tagCounts[b] ?? 0) - (tagCounts[a] ?? 0) || a.localeCompare(b))
+    return Object.keys(tagCounts).sort(
+      (a, b) => (tagCounts[b] ?? 0) - (tagCounts[a] ?? 0) || a.localeCompare(b)
+    )
   }, [tagCounts])
 
   const filtered = useMemo(() => {
     const list = projects ?? []
     if (!selected.length) return list
-    return list.filter((p) => selected.every((t) => p.tags.includes(t)))
+
+    return list.filter((project) =>
+      selected.every((tag) => (project.tags ?? []).includes(tag))
+    )
   }, [projects, selected])
 
   function toggleTag(tag: string) {
-    setSelected((prev) => (prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]))
+    setSelected((prev) =>
+      prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
+    )
   }
 
   return (
@@ -50,21 +92,25 @@ export default function Projects(){
         </div>
 
         <div className="flex items-center gap-3">
-          {allTags.slice(0, 6).map((t) => {
-            const on = selected.includes(t)
+          {allTags.slice(0, 6).map((tag) => {
+            const active = selected.includes(tag)
+
             return (
               <button
-                key={t}
+                key={tag}
                 type="button"
-                onClick={() => toggleTag(t)}
+                onClick={() => toggleTag(tag)}
                 className={
                   'rounded-full px-3 py-1.5 text-sm backdrop-blur-2xl shadow-sm transition ' +
-                  (on
+                  (active
                     ? 'bg-zinc-950/10 dark:bg-white/10'
                     : 'bg-white/[0.10] hover:bg-white/[0.14] dark:bg-white/[0.05] dark:hover:bg-white/[0.07]')
                 }
               >
-                {t} <span className="ml-1 text-xs text-zinc-500 dark:text-zinc-400">{tagCounts[t] ?? 0}</span>
+                {tag}
+                <span className="ml-1 text-xs text-zinc-500 dark:text-zinc-400">
+                  {tagCounts[tag] ?? 0}
+                </span>
               </button>
             )
           })}
@@ -90,9 +136,9 @@ export default function Projects(){
         </div>
       </div>
 
-      <div className="grid sm:grid-cols-2 gap-6 mt-8">
-        {filtered.map((p) => (
-          <ProjectCard key={p.slug} project={p} />
+      <div className="mt-8 grid gap-6 sm:grid-cols-2">
+        {filtered.map((project) => (
+          <ProjectCard key={project.slug} project={project} />
         ))}
       </div>
     </section>
