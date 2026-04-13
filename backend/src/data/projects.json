@@ -1,38 +1,32 @@
 [
   {
-    "title": "Portfolio Site",
-    "slug": "portfolio-site",
-    "summary": "A minimal portfolio built with a React + Vite frontend and an Express API.",
-    "description": "This site — built with React, Tailwind, and Express.",
-    "tags": ["React", "TypeScript", "Tailwind", "Express"],
+    "title": "Portfolio System",
+    "slug": "portfolio-system",
+    "summary": "A structured portfolio platform built with React, TypeScript, and an Express backend to showcase projects and technical development.",
+    "description": "This project is a full portfolio system designed and built from scratch to present technical work in a structured and scalable way. The frontend is built using React, Vite, and Tailwind CSS, focusing on clean UI, responsiveness, and component-based design. The backend uses Express with TypeScript, allowing dynamic content handling and separation between data and presentation. The system is designed to be extendable, making it easy to add new sections, projects, and content over time. The main goal of this project was not just visual presentation, but building a well-structured system with clear data flow and maintainable architecture.",
+    "tags": ["React", "TypeScript", "Tailwind", "Express", "System Design"],
     "status": "active",
     "date": "2026-04-10",
     "images": [
       {
-        "src": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80",
-        "alt": "Desk setup"
+        "src": "./Photos/Portfolio-System/Portfolio1",
+        "alt": "Portfolio system overview - Light"
       },
       {
-        "src": "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=1600&q=80",
-        "alt": "Laptop"
-      }
-    ],
-    "links": [{ "label": "Source", "url": "#" }]
-  },
-  {
-    "title": "Minimal API",
-    "slug": "minimal-api",
-    "summary": "A small TypeScript API demonstrating clean patterns.",
-    "description": "A small TypeScript API demonstrating clean patterns.",
-    "tags": ["TypeScript", "Node.js", "Express"],
-    "status": "wip",
-    "date": "2026-04-10",
-    "images": [
+        "src": "./Photos/Portfolio-System/Portfolio2",
+        "alt": "Contact Form - Light"
+      },
       {
-        "src": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1600&q=80",
-        "alt": "Code editor"
+        "src": "./Photos/Portfolio-System/Portfolio4",
+        "alt": "Portfolio system overview - Dark"
+      },
+      {
+        "src": "./Photos/Portfolio-System/Portfolio3",
+        "alt": "Contact Form - Dark"
       }
     ],
-    "links": [{ "label": "Source", "url": "#" }]
+    "links": [
+      { "label": "Source", "url": "https://github.com/Benni3/nemethPortfolio" }
+    ]
   }
 ]

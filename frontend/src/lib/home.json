@@ -2,37 +2,130 @@
   "hero": {
     "tag": "Portfolio",
     "name": "Benjamin Jarlsson Nemeth",
-    "description": "I build systems that connect engineering, software, and intelligent behavior. My focus is on creating thoughtful, scalable solutions that combine theory with practical implementation."
+    "description": "I build systems that connect engineering, software, and intelligent behavior. My focus is on understanding how systems work at a deep level and designing solutions that are both structured and practical."
   },
+
   "sections": [
+
     {
       "type": "paragraph",
       "title": "Who am I?",
-      "text": "I’m an Electrical Engineering student at DTU with strong interests in software, AI, robotics, and systems design. I enjoy building projects where multiple fields come together into one coherent system.",
+      "text": "I’m an Electrical Engineering student at DTU with a strong interest in how systems are built from the ground up. I am naturally curious about how components interact, how data flows through systems, and how decisions are made within constraints. I enjoy working across disciplines — combining hardware, software, and structured thinking into systems that actually function in practice. My approach is hands-on, iterative, and focused on understanding rather than just completing tasks.",
       "ctaLabel": "Read more about me",
       "ctaUrl": "/about"
     },
+
     {
       "type": "paragraph",
-      "title": "About",
-      "text": "Learn more about my background, interests, technical focus areas, and long-term vision.",
-      "ctaLabel": "Go to About",
-      "ctaUrl": "/about"
-    },
-    {
-      "type": "paragraph",
-      "title": "Projects",
-      "text": "Explore the projects I’ve built, the systems I’m working on, and the ideas I’m testing across hardware, software, and design.",
+      "title": "What I Build",
+      "text": "I work on small to medium-scale projects that connect theory with implementation. These projects often involve combining different technologies — such as backend systems, simple frontends, and logical architectures — into one cohesive solution. While not all projects are large, they are all intentional and built to deepen my understanding of system behavior, structure, and design. I focus on learning through building, testing, and refining.",
       "ctaLabel": "Browse projects",
       "ctaUrl": "/projects"
     },
+
     {
       "type": "paragraph",
-      "title": "Why contact?",
-      "text": "Reach out if you want to collaborate, discuss ideas, explore technical work, or connect around engineering, AI, systems, or product-building.",
+      "title": "How I Work",
+      "text": "I approach problems by first trying to understand the overall system before diving into details. I prefer building simple versions quickly, testing them, and then iterating. This allows me to learn fast and adapt my approach based on real results rather than assumptions. I value clarity, structure, and efficiency, both in code and in system design. I aim to create solutions that are not only functional, but also logically organized and easy to extend.",
+      "ctaLabel": "See my approach",
+      "ctaUrl": "/about"
+    },
+
+    {
+      "type": "paragraph",
+      "title": "Technical Direction",
+      "text": "My current focus is on becoming strong at the intersection of hardware and software. I am particularly interested in embedded systems, system-level engineering, and how intelligent behavior can be integrated into real systems. Over time, I aim to work on more advanced systems that involve real-time processing, decision-making, and interaction with the physical world. I am still exploring, but always with the goal of building a solid and flexible foundation.",
+      "ctaLabel": "Explore details",
+      "ctaUrl": "/about"
+    },
+
+    {
+      "type": "paragraph",
+      "title": "About",
+      "text": "This section goes deeper into my background, how I think, what drives me, and the direction I am working toward. It covers both my technical development and my personal approach to learning and problem solving. If you want to understand how I approach engineering beyond just tools and projects, this is the place to start.",
+      "ctaLabel": "Go to About",
+      "ctaUrl": "/about"
+    },
+
+    {
+      "type": "paragraph",
+      "title": "Projects",
+      "text": "My projects are focused on exploration and learning. They are not always large, but they are designed to test ideas, connect concepts, and build practical understanding. You will find a mix of software systems, structured applications, and technical experiments that reflect my current level and direction.",
+      "ctaLabel": "View Projects",
+      "ctaUrl": "/projects"
+    },
+
+    {
+      "type": "paragraph",
+      "title": "What I’m Looking For",
+      "text": "I am looking for opportunities where I can learn, contribute, and work with real systems. I am especially interested in environments where engineering is both practical and structured — where I can develop my understanding of hardware, software, and system design in real-world contexts. I value environments where curiosity, responsibility, and continuous improvement are part of the culture.",
+      "ctaLabel": "Get in touch",
+      "ctaUrl": "/contact"
+    },
+
+    {
+      "type": "paragraph",
+      "title": "Why Contact?",
+      "text": "Feel free to reach out if you want to collaborate, discuss ideas, or connect around engineering, systems, or technology. I am always open to conversations about projects, technical challenges, or opportunities where I can learn and contribute. Even simple discussions often lead to new perspectives and ideas.",
       "ctaLabel": "Go to Contact",
       "ctaUrl": "/contact"
     },
+
+    {
+      "type": "list",
+      "title": "Core Focus",
+      "items": [
+        "Electrical engineering and physical systems",
+        "System design and architecture",
+        "Embedded systems and integration",
+        "Software development and backend systems",
+        "AI and intelligent behavior in systems",
+        "Mathematical thinking and abstraction",
+        "Problem solving in real-world environments",
+        "Continuous learning through building"
+      ]
+    },
+
+    {
+      "type": "timeline",
+      "title": "Journey",
+      "items": [
+        {
+          "label": "Present",
+          "title": "DTU — Electrical Engineering",
+          "description": "Currently studying Electrical Engineering with a focus on building strong technical foundations. Working with both theoretical and practical aspects of engineering, including circuits, systems, and structured problem solving. Continuously applying knowledge through projects and independent exploration."
+        },
+        {
+          "label": "2024–Present",
+          "title": "Technical Work — Ryde Technologies",
+          "description": "Gaining hands-on experience with real hardware systems, focusing on diagnostics, repair, and system reliability. Learning how systems behave outside ideal conditions and developing structured troubleshooting approaches."
+        },
+        {
+          "label": "2023–2024",
+          "title": "Academic Foundation — St. Olav / UiS",
+          "description": "Built a strong base in mathematics, physics, and technical subjects. Developed analytical thinking and an interest in engineering systems, which led to pursuing Electrical Engineering."
+        },
+        {
+          "label": "Ongoing",
+          "title": "Independent Exploration",
+          "description": "Continuously working on small projects and technical experiments to expand my understanding. Focused on connecting theory with practice and exploring new technologies."
+        }
+      ]
+    },
+
+    {
+      "type": "skills",
+      "title": "Focus Areas",
+      "items": [
+        { "label": "Systems Thinking", "value": 90 },
+        { "label": "Problem Solving", "value": 88 },
+        { "label": "Software Development", "value": 80 },
+        { "label": "Electrical Engineering", "value": 78 },
+        { "label": "Hardware Understanding", "value": 75 },
+        { "label": "Learning & Adaptability", "value": 92 }
+      ]
+    },
+
     {
       "type": "timeline",
       "title": "Achievements",
@@ -40,7 +133,7 @@
         {
           "label": "2026",
           "title": "DTU — Electrical Engineering (Ongoing)",
-          "description": "Currently pursuing a Bachelor's degree in Electrical Engineering, focusing on systems design, electronics, and software integration.",
+          "description": "Continuing to build strong technical skills and understanding of engineering systems, combining theory and practical work across multiple domains.",
           "links": [
             {
               "label": "View University",
@@ -50,19 +143,14 @@
         },
         {
           "label": "2025",
-          "title": "Top Grades — TN-102 & Mat-100",
-          "description": "Achieved the highest grade (12) in both TN-102 and Mat-100, demonstrating strong analytical and mathematical capabilities.",
-          "links": [
-            {
-              "label": "Download Certificate",
-              "url": "/certificates/tn102-mat100.pdf"
-            }
-          ]
+          "title": "Top Grades — Technical Courses",
+          "description": "Achieved top grades in demanding technical and mathematical courses, demonstrating strong analytical thinking and consistent performance.",
+          "links": []
         },
         {
           "label": "2025",
-          "title": "Independent Engineering Projects",
-          "description": "Designed and built multiple full-stack and hardware-integrated projects, combining software, systems design, and real-world problem solving.",
+          "title": "Independent Projects",
+          "description": "Developed multiple small-scale systems and applications, focusing on structured design, implementation, and learning through practice.",
           "links": [
             {
               "label": "View Projects",
@@ -72,22 +160,12 @@
         },
         {
           "label": "2024",
-          "title": "Technical Work — Ryde Technologies",
-          "description": "Worked with hardware diagnostics and repair of electric scooters, gaining hands-on experience with electronics, troubleshooting, and system reliability.",
+          "title": "Technical Work Experience",
+          "description": "Worked hands-on with hardware systems, gaining practical understanding of electronics, troubleshooting, and system behavior.",
           "links": []
-        },
-        {
-          "label": "2023",
-          "title": "St. Olav / UiS Coursework",
-          "description": "Completed advanced technical coursework alongside high school studies, achieving top results and building early academic foundations.",
-          "links": [
-            {
-              "label": "View Transcript",
-              "url": "/certificates/uis-transcript.pdf"
-            }
-          ]
         }
       ]
     }
+
   ]
 }

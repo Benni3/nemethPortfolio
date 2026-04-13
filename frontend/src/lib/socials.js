@@ -1,17 +1,17 @@
 export const SOCIAL_LINKS = [
     {
         title: 'LinkedIn',
-        href: 'https://www.linkedin.com/',
+        href: 'www.linkedin.com/in/benjaminemeth',
         kind: 'linkedin',
     },
     {
         title: 'Mail',
-        href: 'mailto:hello@example.com',
+        href: 'benjamin.nemeth05@icloud.com',
         kind: 'mail',
     },
     {
         title: 'Github',
-        href: 'mailto:hello@example.com',
+        href: 'https://github.com/Benni3',
         kind: 'github',
     },
 ];

@@ -36,7 +36,7 @@ function SunIcon({ active }: { active: boolean }) {
     <svg
       viewBox="0 0 24 24"
       className={[
-        'absolute h-5 w-5 text-yellow-500',
+        "absolute h-5 w-5 text-[rgb(var(--accent))]",
         'transition-all duration-500 ease-out',
         active
           ? 'rotate-0 scale-100 opacity-100'
