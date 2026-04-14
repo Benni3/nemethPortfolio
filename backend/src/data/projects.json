@@ -9,19 +9,19 @@
     "date": "2026-04-10",
     "images": [
       {
-        "src": "./Photos/Portfolio-System/Portfolio1",
+        "src": "/photos/portfolio-system/Portfolio1.png",
         "alt": "Portfolio system overview - Light"
       },
       {
-        "src": "./Photos/Portfolio-System/Portfolio2",
+        "src": "/photos/portfolio-system/Portfolio2.png",
         "alt": "Contact Form - Light"
       },
       {
-        "src": "./Photos/Portfolio-System/Portfolio4",
+        "src": "/photos/portfolio-system/Portfolio4.png",
         "alt": "Portfolio system overview - Dark"
       },
       {
-        "src": "./Photos/Portfolio-System/Portfolio3",
+        "src": "/photos/portfolio-system/Portfolio3.png",
         "alt": "Contact Form - Dark"
       }
     ],
