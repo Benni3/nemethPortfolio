@@ -98,16 +98,23 @@ function clampText(text: string, max = 180) {
   return `${text.slice(0, max).trim()}…`
 }
 
+const PREVIEW_LIMITS = {
+  paragraph: 100,
+  list: 4,
+  timeline: 2,
+  skills: 4,
+} as const
+
 function needsShowMore(section: HomeSection) {
   switch (section.type) {
     case 'paragraph':
-      return section.text.length > 180
+      return section.text.length > PREVIEW_LIMITS.paragraph
     case 'list':
-      return section.items.length > 4
+      return section.items.length > PREVIEW_LIMITS.list
     case 'timeline':
-      return section.items.length > 2
+      return section.items.length > PREVIEW_LIMITS.timeline
     case 'skills':
-      return section.items.length > 4
+      return section.items.length > PREVIEW_LIMITS.skills
     default:
       return false
   }
@@ -190,27 +197,34 @@ function ListFull({ section }: { section: ListSection }) {
 
 function TimelinePreview({ section }: { section: TimelineSection }) {
   return (
-    <div className="mt-5 space-y-5">
-      {section.items.slice(0, 2).map((item, index) => (
-        <div key={`${item.label}-${item.title}-${index}`} className="flex gap-4">
-          <div className="flex flex-col items-center">
-            <div className="h-3 w-3 rounded-full bg-accent" />
-            {index < Math.min(section.items.length, 2) - 1 && (
-              <div className="mt-2 w-px flex-1 bg-zinc-300 dark:bg-zinc-700" />
-            )}
-          </div>
+    <div className="mt-5 space-y-5 max-h-[220px] overflow-hidden">
+      {section.items
+        .slice(0, PREVIEW_LIMITS.timeline)
+        .map((item, index) => (
+          <div
+            key={`${item.label}-${item.title}-${index}`}
+            className="flex gap-4"
+          >
+            <div className="flex flex-col items-center">
+              <div className="h-3 w-3 rounded-full bg-accent" />
+              {index < PREVIEW_LIMITS.timeline - 1 && (
+                <div className="mt-2 w-px flex-1 bg-zinc-300 dark:bg-zinc-700" />
+              )}
+            </div>
 
-          <div className="pb-2">
-            <p className="text-xs uppercase tracking-wide text-zinc-500">
-              {item.label}
-            </p>
-            <h3 className="text-lg font-medium">{item.title}</h3>
-            <p className="mt-1 text-zinc-700 dark:text-zinc-300">
-              {item.description}
-            </p>
+            <div className="pb-2">
+              <p className="text-xs uppercase tracking-wide text-zinc-500">
+                {item.label}
+              </p>
+
+              <h3 className="text-lg font-medium">{item.title}</h3>
+
+              <p className="mt-1 text-zinc-700 dark:text-zinc-300">
+                {clampText(item.description, 120)}
+              </p>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
     </div>
   )
 }
@@ -569,6 +583,8 @@ export default function Home() {
   return (
     <section className="mx-auto max-w-6xl px-4 py-14">
       <div className="grid grid-cols-1 gap-6 xl:grid-cols-3">
+        
+        {/* 1 — Hero */}
         <Card className="p-8 xl:col-span-2">
           <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
             {content.hero.tag}
@@ -587,6 +603,7 @@ export default function Home() {
           </div>
         </Card>
 
+        {/* 2 — Who am I */}
         <Card className="p-6">
           <h2 className="text-2xl font-semibold tracking-tight">Who am I?</h2>
 
@@ -610,21 +627,36 @@ export default function Home() {
           </div>
         </Card>
 
-        {content.sections.map((section, index) => (
+        {/* 3–8 — First 6 section cards */}
+        {content.sections.slice(0, 6).map((section, index) => (
           <HomeSectionPreview
             key={`${section.type}-${section.title}-${index}`}
             section={section}
             onOpen={() => openSection(section)}
           />
         ))}
+
+        {/* 9 — Project Carousel */}
+        <div className="xl:col-span-3">
+          <ProjectCarousel />
+        </div>
+
+        {/* Remaining section cards */}
+        {content.sections.slice(6).map((section, index) => (
+          <HomeSectionPreview
+            key={`${section.type}-${section.title}-${index + 6}`}
+            section={section}
+            onOpen={() => openSection(section)}
+          />
+        ))}
       </div>
 
-      <div className="mt-6">
-        <ProjectCarousel />
-      </div>
-
+      {/* Modal */}
       {hasModal ? (
-        <HomeSectionModal section={modal.section as HomeSection} onClose={closeSection} />
+        <HomeSectionModal
+          section={modal.section as HomeSection}
+          onClose={closeSection}
+        />
       ) : null}
     </section>
   )
