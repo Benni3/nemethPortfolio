@@ -2,31 +2,95 @@
   {
     "title": "Portfolio System",
     "slug": "portfolio-system",
-    "summary": "A structured portfolio platform built with React, TypeScript, and an Express backend to showcase projects and technical development.",
-    "description": "This project is a full portfolio system designed and built from scratch to present technical work in a structured and scalable way. The frontend is built using React, Vite, and Tailwind CSS, focusing on clean UI, responsiveness, and component-based design. The backend uses Express with TypeScript, allowing dynamic content handling and separation between data and presentation. The system is designed to be extendable, making it easy to add new sections, projects, and content over time. The main goal of this project was not just visual presentation, but building a well-structured system with clear data flow and maintainable architecture.",
-    "tags": ["React", "TypeScript", "Tailwind", "Express", "System Design"],
+    "summary": "Full-stack developer portfolio built with React, TypeScript, Tailwind CSS, and Express for scalable project presentation and content management.",
+    "description": "A modular portfolio platform designed to showcase technical projects, experiments, and engineering work in a structured and scalable way. The frontend is built with React, Vite, TypeScript, and Tailwind CSS, focusing on responsiveness, smooth animations, and reusable component architecture. The backend uses Express and TypeScript to separate content management from presentation logic, making the system easy to extend with additional sections, blog posts, and dynamic project pages. The project focuses heavily on maintainability, clean system architecture, and long-term scalability rather than only visual design.",
+    "tags": [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Express",
+      "Portfolio",
+      "Frontend",
+      "Backend",
+      "Full Stack"
+    ],
     "status": "active",
     "date": "2026-04-10",
     "images": [
       {
         "src": "/photos/portfolio-system/Portfolio1.png",
-        "alt": "Portfolio system overview - Light"
+        "alt": "Portfolio homepage in light mode"
       },
       {
         "src": "/photos/portfolio-system/Portfolio2.png",
-        "alt": "Contact Form - Light"
+        "alt": "Portfolio contact form in light mode"
       },
       {
         "src": "/photos/portfolio-system/Portfolio4.png",
-        "alt": "Portfolio system overview - Dark"
+        "alt": "Portfolio homepage in dark mode"
       },
       {
         "src": "/photos/portfolio-system/Portfolio3.png",
-        "alt": "Contact Form - Dark"
+        "alt": "Portfolio contact form in dark mode"
       }
     ],
     "links": [
-      { "label": "Source", "url": "https://github.com/Benni3/nemethPortfolio" }
+      {
+        "label": "Source",
+        "url": "https://github.com/Benni3/nemethPortfolio"
+      }
+    ]
+  },
+
+  {
+    "title": "Nemreg",
+    "slug": "nemreg",
+    "summary": "Python regression library focused on simplifying mathematical regression analysis, curve fitting, and statistical modeling workflows.",
+    "description": "Nemreg is a lightweight regression and curve fitting library built in Python using NumPy and SciPy. The goal of the project is to simplify regression workflows while keeping the implementation transparent and easy to extend. The library supports multiple regression models, numerical fitting methods, and customizable mathematical analysis pipelines. The project was created to explore numerical methods, optimization, and scientific computing while building a reusable toolkit for future engineering and data analysis projects.",
+    "tags": [
+      "Python",
+      "NumPy",
+      "SciPy",
+      "Regression",
+      "Curve Fitting",
+      "Scientific Computing",
+      "Data Analysis",
+      "Mathematics"
+    ],
+    "status": "active",
+    "date": "2026-05-19",
+    "images": [],
+    "links": [
+      {
+        "label": "Source",
+        "url": "https://github.com/Benni3/nemreg"
+      }
+    ]
+  },
+
+  {
+    "title": "NemTikz",
+    "slug": "nemtikz",
+    "summary": "Interactive circuit and diagram editor with TikZ export support for LaTeX-based technical documentation.",
+    "description": "NemTikz is a browser-based diagram and circuit editor designed for creating technical figures that can be exported directly to TikZ and LaTeX. The system is built with React, TypeScript, and React Flow, focusing on orthogonal wire routing, scalable node systems, and engineering-oriented workflows. The project explores how modern web technologies can simplify the creation of publication-ready technical diagrams while preserving compatibility with LaTeX-based academic and engineering environments.",
+    "tags": [
+      "React",
+      "TypeScript",
+      "TikZ",
+      "LaTeX",
+      "React Flow",
+      "Circuit Design",
+      "Diagram Editor",
+      "Engineering Tools"
+    ],
+    "status": "active",
+    "date": "2026-05-19",
+    "images": [],
+    "links": [
+      {
+        "label": "Source",
+        "url": "https://github.com/Benni3/nemtikz"
+      }
     ]
   }
 ]

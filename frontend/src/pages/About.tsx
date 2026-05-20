@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react'
 import Card from '../components/Card'
 import aboutData from '../lib/about.json'
 import cvPdf from '../lib/Benjamin_Nemeth_CV.pdf'
+import { Helmet } from "react-helmet-async";
 
 type ParagraphSection = {
   type: 'paragraph'
@@ -332,6 +333,11 @@ export default function About() {
   const hasModal = useMemo(() => modal.open && modal.section, [modal])
 
   return (
+    <>
+    <Helmet> 
+      <title> </title>
+    </Helmet>
+
     <section className="mx-auto max-w-6xl px-4 py-14">
       <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
         <div>
@@ -366,5 +372,6 @@ export default function About() {
         <SectionModal section={modal.section as AboutSection} onClose={closeSection} />
       ) : null}
     </section>
+    </>
   )
 }
